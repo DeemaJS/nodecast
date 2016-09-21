@@ -1,20 +1,19 @@
 
 var http = require('http');
+var url = require('url');
 
-var server = new http.Server();
-// http.Server -> net.Server -> events.EventEmitter
 
-server.listen(1337, '127.0.0.1');
+var server = new http.Server(function(req, res) {
 
-var counter = 0;
+  var urlParsed = url.parse(req.url, true);
 
-var emit = server.emit;
-server.emit = function(event/*, arg1, arg2,... */) {
-  console.log(event);
-  // emit возвращает true, если на событие были обработчики, иначе false
-  emit.apply(this, arguments);
-};
-
-server.on('request', function(req, res) {
-  res.end("Привет, мир!" + ++counter);
+  if (urlParsed.pathname == '/echo' && urlParsed.query.message) {
+    res.setHeader('Cache-control', 'no-cache,no-store,must-revalidate');
+    res.end( urlParsed.query.message );
+  } else {
+    res.statusCode = 404; // Not Found
+    res.end("Page not found");
+  }
 });
+
+server.listen(3000, '127.0.0.1');
