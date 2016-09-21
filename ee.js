@@ -8,6 +8,7 @@ server.on('request', function(request) {
 
 server.on('request', function(request) {
   console.log(request);
+  console.log(process.memoryUsage())
 });
 
 server.on('error', function(err) {
