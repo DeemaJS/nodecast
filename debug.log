@@ -1,0 +1,28 @@
+{"level":"info","message":"Got request GET /echo/message=true","timestamp":"2016-09-23T13:00:02.834Z"}
+{"level":"error","message":"Unknown URL","timestamp":"2016-09-23T13:00:02.838Z"}
+{"level":"info","message":"Got request GET /echo/message=true","timestamp":"2016-09-23T13:00:05.280Z"}
+{"level":"error","message":"Unknown URL","timestamp":"2016-09-23T13:00:05.282Z"}
+{"level":"info","message":"Got request GET /echo/message=123","timestamp":"2016-09-23T13:00:57.351Z"}
+{"level":"error","message":"Unknown URL","timestamp":"2016-09-23T13:00:57.352Z"}
+{"level":"info","message":"Got request GET /echo/message=123","timestamp":"2016-09-23T13:01:22.141Z"}
+{"level":"error","message":"Unknown URL","timestamp":"2016-09-23T13:01:22.141Z"}
+{"level":"info","message":"Got request GET /favicon.ico","timestamp":"2016-09-23T13:01:22.349Z"}
+{"level":"error","message":"Unknown URL","timestamp":"2016-09-23T13:01:22.350Z"}
+{"level":"info","message":"Got request GET /favicon.ico","timestamp":"2016-09-23T13:01:22.421Z"}
+{"level":"error","message":"Unknown URL","timestamp":"2016-09-23T13:01:22.421Z"}
+{"level":"info","message":"Got request GET /echo/message=123","timestamp":"2016-09-23T13:01:26.423Z"}
+{"level":"error","message":"Unknown URL","timestamp":"2016-09-23T13:01:26.425Z"}
+{"level":"info","message":"Got request GET /echo/message=123","timestamp":"2016-09-23T13:02:35.062Z"}
+{"level":"error","message":"Unknown URL","timestamp":"2016-09-23T13:02:35.065Z"}
+{"level":"info","message":"Got request GET /echo/message=123","timestamp":"2016-09-23T13:02:38.854Z"}
+{"level":"error","message":"Unknown URL","timestamp":"2016-09-23T13:02:38.857Z"}
+{"level":"info","message":"Got request GET /echo/message=123","timestamp":"2016-09-23T13:03:10.060Z"}
+{"level":"error","message":"Unknown URL","timestamp":"2016-09-23T13:03:10.061Z"}
+{"level":"info","message":"Got request GET /echo/message=12","timestamp":"2016-09-23T13:04:28.453Z"}
+{"level":"error","message":"Unknown URL","timestamp":"2016-09-23T13:04:28.456Z"}
+{"level":"info","message":"Got request GET /echo&message=12","timestamp":"2016-09-23T13:05:44.743Z"}
+{"level":"error","message":"Unknown URL","timestamp":"2016-09-23T13:05:44.743Z"}
+{"level":"info","message":"Got request GET /echo?message=12","timestamp":"2016-09-23T13:05:50.810Z"}
+{"level":"info","message":"Echo: 12","timestamp":"2016-09-23T13:05:50.811Z"}
+{"level":"info","message":"Got request GET /echo?message=12","timestamp":"2016-09-23T13:08:01.405Z"}
+{"level":"info","message":"Echo: 12","timestamp":"2016-09-23T13:08:01.408Z"}
