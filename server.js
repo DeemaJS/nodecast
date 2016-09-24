@@ -1,10 +1,24 @@
 var http = require('http');
-var log = require('./log')(module);
+var fs = require('fs');
 
-var server = http.createServer();
+http.createServer(function(req, res) {
 
-server.on('request', require('./request'));
+  if (req.url == '/') {
 
-server.listen(1337);
+    fs.readFile('debug.log', function(err, info) {
+      if (err) {
+        console.error(err);
+        res.statusCode = 500;
+        res.end("На сервере произошла ошибка!");
+        return;
+      }
 
-log.debug("Server is running");
+      res.end(info);
+    });
+
+  } else { 
+    res.statusCode = 404;
+    res.end("Not Found");
+  }
+
+}).listen(3000);
