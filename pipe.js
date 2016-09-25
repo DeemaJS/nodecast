@@ -14,24 +14,24 @@ new http.Server(function(req, res) {
 
 function sendFile(file, res) {
 
-  file.on('readable', write);
+  file.pipe(res);
 
-  function write() {
-    var fileContent = file.read(); // считать
+  file.on('error', function(err) {
+    res.statusCode = 500;
+    res.end("Server Error");
+    console.error(err);
+  });
 
-    if (fileContent && !res.write(fileContent)) { // отправить
+  file
+    .on('open',function() {
+      console.log("open");
+    })
+    .on('close', function() {
+      console.log("close");
+    });
 
-      file.removeListener('readable', write);
-
-      res.once('drain', function() { // подождать
-        file.on('readable', write);
-        write();
-      });
-    }
-  }
-  
-  file.on('end', function() {
-    res.end();
+  res.on('close', function() {
+    file.destroy();
   });
 
 }
