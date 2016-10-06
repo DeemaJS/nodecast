@@ -25,7 +25,7 @@ app.use(app.router);
 
 app.get('/', function(req, res, next) {
   res.render("index", {
-    body: '<b>Hello</b>'
+    /*body: '<b>Hello</b>'*/
   });
 });
 
